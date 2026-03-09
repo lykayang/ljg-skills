@@ -2,7 +2,7 @@
 name: ljg-paper
 description: "Paper reader for non-academics. Takes a paper (URL, PDF, or file) and extracts its ideas through a 4-step pipeline: 定位(find the itch) → 翻译(Feynman explain with analogies) → 提纯(distill one insight) → 接线(connect to your world). Focuses on understanding ideas and discoveries, not academic critique. Use when user shares an arxiv link, paper URL, PDF, or asks to analyze a research paper. Trigger words: '读论文', '分析论文', 'paper', or when user shares an academic paper."
 user_invocable: true
-version: "3.0.0"
+version: "3.0.1"
 ---
 
 # ljg-paper: 读论文
@@ -19,6 +19,10 @@ version: "3.0.0"
 ### ASCII Art
 
 所有图表用纯 ASCII 字符。允许：`+ - | / \ > < v ^ * = ~ . : # [ ] ( ) _ , ; ! ' "` 和空格。禁止 Unicode 绘图符号。
+
+### 模板权威性
+
+输出结构**唯一依据** `references/template.org`。禁止参考 `~/Documents/notes/` 中已有论文文件的章节结构——旧文件可能使用过期模板，会污染输出格式。
 
 ### Denote 文件规范
 
@@ -52,7 +56,7 @@ version: "3.0.0"
 
 确保拿到：标题、作者、摘要、引言、方法、实验/结果、结论。
 
-### 2. 定位：它在挠什么痒？
+### 2. 定位：它在解决什么问题？
 
 论文解决的不是什么 "research gap"，是一个真实的困境——某件事做不到、某个现象解释不通、某条路走不下去。
 
@@ -101,7 +105,7 @@ version: "3.0.0"
 - 这个洞见为什么不显然？之前的人为什么没想到？
 - 它改变了你对这个问题的哪个认知？
 
-### 5. 接线：和我的世界连上
+### 5. 启发：对我的提醒
 
 一个孤立的洞见很快会被遗忘。问三个问题试探连接：
 
@@ -113,7 +117,7 @@ version: "3.0.0"
 
 ### 6. 缝合与卫生
 
-按 `references/template.org` 的结构，将以上结果编织成一篇连贯的解读。
+读取 `references/template.org`，严格按其章节标题和层级组织输出。不得从已有论文笔记中继承结构。
 
 写完扫一遍：
 1. 否定式排比全文不超过两处

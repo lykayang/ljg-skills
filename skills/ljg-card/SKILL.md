@@ -1,8 +1,8 @@
 ---
 name: ljg-card
-description: "Content caster (铸). Transforms content into PNG visuals. Five molds: -l (default) long reading card, -i infograph, -m multi-card reading cards (1080x1440), -v visual sketchnote, -c comic (manga-style B&W). Output to ~/Downloads/. Use when user says '铸', 'cast', '做成图', '做成卡片', '做成信息图', '做成海报', '视觉笔记', 'sketchnote', '漫画', 'comic', 'manga'. Replaces ljg-cards and ljg-infograph."
+description: "Content caster (铸). Transforms content into PNG visuals. Six molds: -l (default) long reading card, -i infograph, -m multi-card reading cards (1080x1440), -v visual sketchnote, -c comic (manga-style B&W), -w whiteboard (marker-style board layout). Output to ~/Downloads/. Use when user says '铸', 'cast', '做成图', '做成卡片', '做成信息图', '做成海报', '视觉笔记', 'sketchnote', '漫画', 'comic', 'manga', '白板', 'whiteboard'. Replaces ljg-cards and ljg-infograph."
 user_invocable: true
-version: "1.6.0"
+version: "1.7.0"
 ---
 
 # ljg-card: 铸
@@ -18,6 +18,7 @@ version: "1.6.0"
 | `-m` | 多卡 | 1080 x 1440 | 自动切分为多张阅读卡片 |
 | `-v` | 视觉笔记 | 1080 x auto | 手绘风格 sketchnote，动态选择风格路线 |
 | `-c` | 漫画 | 1080 x auto | 日式黑白漫画风格，动态选择漫画家视觉语言 |
+| `-w` | 白板 | 1080 x auto | 白板马克笔风格，结构化框图+箭头+彩色标记 |
 
 ## 约束
 
@@ -94,3 +95,9 @@ Read `references/mode-sketchnote.md`，按其步骤执行。
 Read `references/mode-comic.md`，按其步骤执行。
 
 模板：`assets/comic_template.html`
+
+### -w：白板
+
+Read `references/mode-whiteboard.md`，按其步骤执行。
+
+模板：`assets/whiteboard_template.html`
